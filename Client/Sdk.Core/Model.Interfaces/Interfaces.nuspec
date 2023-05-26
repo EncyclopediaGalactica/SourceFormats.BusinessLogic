@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<package>
+    <metadata>
+        <id>EncyclopediaGalactica.Sdk.Core.Implementation.Model.Core.Implementation.Interfaces</id>
+        <version>1.0.0</version>
+        <authors>Andras Csanyi</authors>
+        <description>SDK Core.Implementation Model Core.Implementation.Interfaces library of Encyclopedia Galactica</description>
+        <projectUrl>https://github.com/EncyclopediaGalactica/EncyclopediaGalactica/tree/main/Sdk/Sdk.Core.Implementation</projectUrl>
+        <title>
+            SDK Core.Implementation Model Core.Implementation.Interfaces library provides interfaces for being able to use SDK Core.Implementation for communicating
+            with Encyclopedia Galactica system
+        </title>
+        <repository
+                type="git"
+                url="https://github.com/EncyclopediaGalactica/EncyclopediaGalactica/tree/main/Sdk/Sdk.Core.Implementation"
+                branch="main"/>
+    </metadata>
+    <files>
+        <file src="bin/Release/net7.0/EncyclopediaGalactica.Sdk.Core.Implementation.Model.Core.Implementation.Interfaces.xml"/>
+    </files>
+</package>

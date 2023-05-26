@@ -3,7 +3,7 @@
 using Model.Interfaces;
 
 /// <summary>
-/// The Sdk Core Interface
+/// The Sdk Core.Implementation Interface
 /// <remarks></remarks>
 /// </summary>
 public interface ISdkCore

@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
+      <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj" />
     </ItemGroup>
 
 </Project>
