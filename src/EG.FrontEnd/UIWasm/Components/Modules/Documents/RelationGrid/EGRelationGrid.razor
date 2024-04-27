@@ -1,5 +1,29 @@
-<h3>EGRelationGrid</h3>
-
-@code {
-    
-}
+@using EncyclopediaGalactica.BusinessLogic.Contracts
+<FluentGrid Justify="JustifyContent.SpaceEvenly" Style="border: #1b6ec2; border-style: solid; border-width: 1px;">
+    <FluentGridItem xs="2">Document relations</FluentGridItem>
+    <FluentGridItem xs="8"></FluentGridItem>
+    <FluentGridItem xs="2">
+        <FluentButton IconStart="@(new Icons.Filled.Size24.AddCircle())"
+                      OnClick="@(async e => await HandleAddOnClickAsync().ConfigureAwait(false))">
+            Add
+        </FluentButton>
+    </FluentGridItem>
+    <FluentGridItem xs="12">
+        <FluentDataGrid TGridItem="RelationResult"
+                        ItemsProvider="GridItemsProvider"
+                        Virtualize="true"
+                        @ref="Grid">
+            <PropertyColumn Title="Id" Property="@(item => item.Id)"/>
+            <PropertyColumn Title="Left Document Id" Property="@(item => item.LeftDocument.Id)"/>
+            <PropertyColumn Title="Left Document Name" Property="@(item => item.LeftDocument.Name)"/>
+            <PropertyColumn Title="Right Document Id" Property="@(item => item.RightDocument.Id)"/>
+            <PropertyColumn Title="Right Document Name" Property="@(item => item.RightDocument.Name)"/>
+            <TemplateColumn Title="Actions">
+                <FluentButton IconEnd="@(new Icons.Regular.Size16.PreviewLink())"
+                              OnClick="@(async e => await HandlePreviewOnClickAsync(e, context).ConfigureAwait(false))"/>
+                <FluentButton IconEnd="@(new Icons.Regular.Size16.Delete())"
+                              OnClick="@(async e => await HandleDeleteOnClickAsync(e, context).ConfigureAwait(false))"/>
+            </TemplateColumn>
+        </FluentDataGrid>
+    </FluentGridItem>
+</FluentGrid>
